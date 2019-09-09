@@ -1,0 +1,5 @@
+i would like the following: https://karauctionservices-prod.saas.appdynamics.com/controller/#/location=APP_MACHINE_LIST&timeRange=last_1_hour.BEFORE_NOW.-1.-1.60&application=49
+
+https://karauctionservices-prod.saas.appdynamics.com/controller/#/location=APP_DASHBOARD&timeRange=last_1_hour.BEFORE_NOW.-1.-1.60&application=49&dashboardMode=force
+https://karauctionservices.splunkcloud.com/en-US/app/search/ol_web?form.endpoint=*&form.field2.earliest=-60m&form.field2.latest=now&form.env=p-* set to 15 mins
+https://karauctionservices.splunkcloud.com/en-US/app/search/kar_ol_batch?form.field1.earliest=-24h%40h&form.field1.latest=now set to 6hrs
