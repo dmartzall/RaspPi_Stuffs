@@ -24,7 +24,7 @@
     name: KARauction
     token: _2pbEisVaYkhDd7FtPKN
     state: running
-    service: {{service_id}}
-    hours: {{time}}
-    desc: {{description}}
+    service: {{ service_id }}
+    hours: {{ time }}
+    desc: {{ description }}
   register: pd_window
