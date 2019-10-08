@@ -1,0 +1,30 @@
+---
+- hosts: all
+  vars_prompt:
+
+    - name: description
+      prompt: "Why are you scheduling this maintenance window?"
+      private: no
+
+    - name: time
+      prompt: "How long (in hours) will this service be in maintenance?"
+      private: no
+      
+    - name: service_id
+      prompt: "What is the PagerDuty service ID?"
+      private: no
+
+  tasks:
+
+    - debug:
+        msg: 'Placing the service {{ service_id }} into maintenance for {{ time }} hours'
+
+# Create a maintenance window for a service".
+- pagerduty:
+    name: KARauction
+    token: _2pbEisVaYkhDd7FtPKN
+    state: running
+    service: {{service_id}}
+    hours: {{time}}
+    desc: {{description}}
+  register: pd_window
